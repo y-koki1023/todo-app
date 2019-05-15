@@ -1,8 +1,7 @@
-import React , {useState} from 'react'
+import React  from 'react'
 
 
 function Todo(props){
-    const [state,setState] = useState(props.state);
     const isVisible = props.visible;
     const priority = props.priority;
     const style = {
