@@ -14,12 +14,5 @@ function Todo(props){
     )
     
 }
-/*
-const mapDispatchToProps = dispatch =>{
-    return {
-        changeState : (id) => dispatch({type:'CHANGE_STATE', id:id})
-    }
-}
-*/
 
 export default (Todo)

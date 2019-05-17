@@ -22,11 +22,11 @@ function Display(props){
             </div>
             <div style = {inLine}>
                 Middle
-                <TodoList priority = 'Middle' todoDatas = {props.todoDatas}/>
+                <TodoList priority = 'Middle' todoDatas = {props.todoDatas} clicked = {onClick}/>
             </div>
             <div style = {inLine}>
                 Low
-                <TodoList priority = 'Low' todoDatas = {props.todoDatas}/>
+                <TodoList priority = 'Low' todoDatas = {props.todoDatas} clicked = {onClick}/>
             </div>
             
         </div>
