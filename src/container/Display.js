@@ -1,4 +1,4 @@
-import React ,{useState,useEffect}from 'react'
+import React　from 'react'
 import {connect} from 'react-redux'
 import TodoList from '../components/TodoList'
 
@@ -12,38 +12,27 @@ function Display(props){
         width : '200px',
         verticalAlign:  'top'
     }
+    const onClick = props.changeState
+    
     return(
         <div>
             <div style = {inLine}>
                 High
-                <TodoList priority = 'High'/>
+                <TodoList priority = 'High' todoDatas = {props.todoDatas} clicked = {onClick}/>
             </div>
             <div style = {inLine}>
                 Middle
-                <TodoList priority = 'Middle'/>
+                <TodoList priority = 'Middle' todoDatas = {props.todoDatas}/>
             </div>
             <div style = {inLine}>
                 Low
-                <TodoList priority = 'Low'/>
+                <TodoList priority = 'Low' todoDatas = {props.todoDatas}/>
             </div>
             
         </div>
     )
 }
-/*
-function dealTasks(todoDatas,view,priority){
-    const Task = todoDatas.map( todos =>
-        (view === 'All' || todos.state === view) && todos.priority === priority? 
-        <div>
-            <Todo id = {todos.id} key = {todos.id} text = {todos.text} priority = {todos.priority} visible = 'true' /> 
-        </div>:
-        <div>
-            <Todo id = {todos.id} key = {todos.id} text = {todos.text} priority = {todos.priority} visible = 'false' /> 
-        </div>
-    )
-    return Task
-}
-*/
+
 const mapStateToProps = state =>{
     return{
         todoDatas : state.todoDatas,

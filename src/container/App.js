@@ -1,11 +1,12 @@
 import React  from 'react'
+import {connect} from 'react-redux'
 import Filter from '../components/Filter'
 import Form from '../components/Form'
 import Display from './Display'
 
 
 
-function App(){
+function App(props){
     const rootStyle ={
         textAlign: 'center'
     }
@@ -16,7 +17,7 @@ function App(){
         <div style = {rootStyle}>
             <div style = {filterStyle}>
                 Filters 
-                <Filter />
+                <Filter view = {props.view}/>
             </div>
             <div>
                 Insert
@@ -28,4 +29,10 @@ function App(){
         </div>
     )
 }
-export default (App)
+const mapStateToProps = state =>{
+    return {
+        view : state.currentView
+    }
+}
+
+export default connect(mapStateToProps)(App)

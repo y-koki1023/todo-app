@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React　from 'react'
 import {connect} from 'react-redux'
 
 function Filter(props){
@@ -12,11 +12,7 @@ function Filter(props){
         </div>
     )
 }
-const mapStateToProps = state => {
-    return{
-        view : state.view
-    }
-}
+
 const mapDispatchToProps = dispatch => {
     return {
         changeViewToAll : () => dispatch({type : 'CHANGE_VIEW_TO_ALL'}),
@@ -25,4 +21,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Filter)
+export default connect(null,mapDispatchToProps)(Filter)
