@@ -1,19 +1,18 @@
-import React  from 'react'
+import React from 'react'
+
 
 
 function Todo(props){
-    const isVisible = props.visible;
-    const priority = props.priority;
     const style = {
-        color : priority === 'High' ? 'red' : 'black'
+        color : props.todo.priority === 'High' ? 'red' : 'black'
     }
     return(
             <div>
-                {isVisible === 'true' && <p style = {style}>{props.text} : State {props.state} </p>}
+                <p style = {style}> {props.todo.text} : {props.todo.isActive ? 'Active' : 'Done'} </p>
+                <button style = {style} onClick = {() => props.clicked(props.todo.id)}>Check</button>
             </div>
     )
-
+    
 }
 
-
-export default Todo
+export default (Todo)
