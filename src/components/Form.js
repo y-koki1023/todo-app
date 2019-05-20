@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {connect} from 'react-redux'
 
 function Form(props){
-    const [text,setText] = useState("Please enter your task here!")
+    const [text,setText] = useState("Insert task here")
     const [priority,setPriority] = useState("High")
     return (
         <div>

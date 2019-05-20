@@ -10,17 +10,12 @@ function App(props){
     const rootStyle ={
         textAlign: 'center'
     }
-    const filterStyle = {
-        textAlign: 'left' 
-    }
     return(
         <div style = {rootStyle}>
-            <div style = {filterStyle}>
-                Filters 
+            <div>
                 <Filter view = {props.view}/>
             </div>
             <div>
-                Insert
                 <Form />
             </div>
             <div>

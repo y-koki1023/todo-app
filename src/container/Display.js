@@ -2,10 +2,7 @@ import React　from 'react'
 import {connect} from 'react-redux'
 import TodoList from '../components/TodoList'
 
-
-
 function Display(props){
-
     const inLine = {
         display: 'inline-block',
         padding : '50px',
@@ -13,7 +10,6 @@ function Display(props){
         verticalAlign:  'top'
     }
     const onClick = props.changeState
-    
     return(
         <div>
             <div style = {inLine}>

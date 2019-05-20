@@ -1,12 +1,11 @@
 import React　from 'react'
 import {connect} from 'react-redux'
-
+import styles from '../css/filter.css'
 function Filter(props){
-
     return(
         <div>
-            <p>{props.view}</p>
-            <button onClick = {props.changeViewToAll}> All </button>
+            Filter: 
+            <button style = {styles.sClicked} onClick = {props.changeViewToAll}> All </button>
             <button onClick = {props.changeViewToActive}> Active </button> 
             <button onClick = {props.changeViewToDone}> Done </button>  
         </div>
