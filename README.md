@@ -2,11 +2,11 @@
 ## 作成課題
 To-DoアプリをReactを使用して作成
 
-###前提条件
+### 前提条件
 - 最新のバージョンのReactを使用
 - 最新のGoogle Chromeで動作するか確認する
 
-###要求タスク
+### 要求タスク
 - [ ] 1. タスクが一覧できる
 - [ ] 2. タスクが追加できる
 - [ ] 3. タスクが完了できる
@@ -20,7 +20,7 @@ To-DoアプリをReactを使用して作成
 - [ ] 7. 極力Class Componentを使わず、React Hooksのみを使う
 - [ ] 8. CSSを使ってUIをスタイリングする
 
-###セットアップ方法
+### セットアップ方法
 1.  facebookから提供されている Create React App (https://github.com/facebook/create-react-app)を使用し<br>
     reactの動作する環境を作成
 2.  今回はreduxを使用したかったので、redux と react-redux を環境に導入した。導入には以下のコマンドを使用した。
