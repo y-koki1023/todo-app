@@ -1,5 +1,6 @@
 import React  from 'react'
 import {connect} from 'react-redux'
+import Header from '../components/Header'
 import Filter from '../components/Filter'
 import Form from '../components/Form'
 import Display from './Display'
@@ -12,6 +13,7 @@ function App(props){
     }
     return(
         <div style = {rootStyle}>
+            <Header />
             <div>
                 <Filter view = {props.view}/>
             </div>
